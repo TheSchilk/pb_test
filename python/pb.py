@@ -35,6 +35,7 @@ if p.returncode != 0:
 # Decode:
 stdout_data = stdout_data[2:]
 cmd.ParseFromString(stdout_data)
+cmd.ack_py = True
 print(cmd)
 print(cmd.payload)
 
