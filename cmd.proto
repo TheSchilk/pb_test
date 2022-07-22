@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package psMCU;
+
+message Cmd {
+  required CmdType type = 1;
+  enum CmdType {
+    PING = 0;
+    ACK = 1;
+  }
+
+  required bool ack_py = 2;
+  required bool ack_rs = 3;
+  required bool ack_c = 4;
+
+  optional bytes payload = 5;
+}
